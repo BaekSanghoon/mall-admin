@@ -15,6 +15,9 @@
 	</li>
 	<li class="nav-item">
 		<a href="/mall-admin/product/productList.jsp" class="btn btn-info" role="button">[상품관리]</a>
+	</li>		
+	<li class="nav-item">
+		<a href="/mall-admin/orders/ordersList.jsp" class="btn btn-info" role="button">[주문관리]</a>
 	</li>	
 	<li class="nav-item">
 		<a href="/mall-admin/notice/noticeList.jsp" class="btn btn-info" role="button">[공지관리]</a>

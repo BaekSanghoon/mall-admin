@@ -37,12 +37,12 @@
 	
 	//리스트 전체출력
 	if (ordersState.equals("")) {
-		list = ordersDao.selectOrdersList();
+		list = ordersDao.selectOrdersList(); //주문내역 리스트 dao
 	//검색한 주문 상태 리스트 출력	
 	} else {
 		//list = ordersDao.selectOrdersListByState(ordersState);
 	}
-	ArrayList<String> ordersStateList = ordersDao.selectOrdersStateList();
+	ArrayList<String> ordersStateList = ordersDao.selectOrdersStateList();//ordersStateList의 리스트값을 보여주는db
 		//list2 = ordersDao.selectOrdersStateList();
 	%>
 	<h1>주문 목록</h1>
@@ -90,7 +90,7 @@
 				<td><%=ordersAndProduct.getOrders().getOrdersAddr() %></td>
 				<td><%=ordersAndProduct.getOrders().getOrdersState() %></td>
 				<td><%=ordersAndProduct.getOrders().getOrdersDate() %></td>
-				<td><a href = "/mall-admin/orders/modifyOrdersState.jsp?ordersId<%=ordersAndProduct.getOrders().getOrdersId()%>" >orders state 수정</a></td>
+				<td><a href = "/mall-admin/orders/modifyOrdersState.jsp?ordersId=<%=ordersAndProduct.getOrders().getOrdersId()%>&ordersState=<%=ordersAndProduct.getOrders().getOrdersState() %>" >orders state 수정</a></td>
 			</tr>
 			<%
 				}

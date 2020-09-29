@@ -18,11 +18,11 @@
 		<table border="1">
 			<tr>
 				<td>관리자 ID</td>
-				<td><input type="text" name="adminId"></td>
+				<td><input type="text" name="adminId" value="admin@goodee.com"></td>
 			</tr>
 			<tr>
 				<td>관리자 PW</td>
-				<td><input type="text" name="adminPw"></td>
+				<td><input type="text" name="adminPw" value="a123"></td>
 			</tr>
 		</table>
 		<button type="submit">로그인</button>

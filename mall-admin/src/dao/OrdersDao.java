@@ -103,8 +103,21 @@ public class OrdersDao {
 		String sql = "update orders set orders_state = ? where orders_id = ?";
 	}
 	
-	public Orders selectOrdersOne(int OrdersId) {
+	public Orders selectOrdersOne(Orders orders) throws Exception{
+		
+		DBUtil dbUtil = new DBUtil();
+		Connection conn = dbUtil.getConnection();
+		
 		String sql ="select orders_id, orders_state from orders where orders_id=? ";
-		return null;
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setInt(1, orders.getOrdersId());
+		ResultSet rs = stmt.executeQuery();
+		if(rs.next()) {
+			orders = new Orders();
+			orders.setOrdersId(rs.getInt("orders_id"));
+			orders.setOrdersState(rs.getString("ordersState"));
+		}
+		conn.close();
+		return orders;
 	}
 }

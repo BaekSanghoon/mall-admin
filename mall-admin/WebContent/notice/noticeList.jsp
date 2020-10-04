@@ -11,15 +11,18 @@
 </head>
 <body>
 <div class="container">
-		<div>
-			<jsp:include page="/inc/menu.jsp"></jsp:include>
-		</div>
-<h1>공지사항 관리</h1>
+
+
 <%
 		request.setCharacterEncoding("utf-8");
 		NoticeDao noticeDao = new NoticeDao();
 		ArrayList<Notice>list = noticeDao.selectNoticeListAll();
 %>
+
+	<div>
+		<jsp:include page="/inc/menu.jsp" ></jsp:include>
+	</div>
+	<h1>공지사항 관리</h1>
 	<table class="table">
 		<thead>
 			<tr>

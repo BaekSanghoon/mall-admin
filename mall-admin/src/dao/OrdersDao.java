@@ -99,8 +99,20 @@ public class OrdersDao {
 	public void updateOrdersStateById(Orders orders) throws Exception{
 		
 	}	
-	public void updateOrdersState(Orders orders) {
+	// 주문 update
+	public void updateOrdersState(Orders orders) throws Exception{
+		DBUtil dbUtil = new DBUtil();
+		Connection conn = dbUtil.getConnection();
+		System.out.println(conn+"<--conn");
+		
 		String sql = "update orders set orders_state = ? where orders_id = ?";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setString(1, orders.getOrdersState());
+		stmt.setInt(2, orders.getOrdersId());
+		
+		stmt.executeUpdate();
+		
+		conn.close();
 	}
 	
 	public Orders selectOrdersOne(Orders orders) throws Exception{

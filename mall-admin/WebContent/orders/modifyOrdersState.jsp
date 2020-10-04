@@ -7,8 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>modifyOrdersState.jsp</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+<div class="container">
 	<%
 		request.setCharacterEncoding("utf-8");
 		
@@ -69,12 +71,13 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2">
+						<td>
 							<button type="submit" class="btn btn-info">수정</button>
 						</td>
 					</tr>
 				</table>
 			</form>
 		</div>
+	</div>	
 </body>
 </html>

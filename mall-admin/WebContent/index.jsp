@@ -33,12 +33,12 @@
 	</div>
 	
 	<div>
-		<img src="./image/sea.jpeg" align="center" class="img-thumbnail" >
+		<img src="./image/admin.jpg" align="center" class="img-thumbnail" >
 	</div>
 	
 	<table border="1" align="center">
 	<th>
-	본 프로젝트는 강사님과 수업을 진행하는중 한달 정도의 기간으로 모델1방식을 적용하여 만든 쇼핑몰 관리자 프로젝트입니다.</p>
+	본 프로젝트는 강사님과 학원에서 한달 정도의 기간동안 배운것을 응용하여 만든 쇼핑몰 관리자 프로젝트입니다.</p>
 	본 프로젝트에는 쇼핑몰 카테고리 관리와 상품관리로 구성되어 있습니다.</p>
 	각각의 프로젝트에는 카테고리 정보의 등록 및 수정 삭제가 구현되어 있습니다.</p>
 	개발 환경은 java 8버전을 사용하였으며 tomcat 8.5버전으로 진행하였고  이클립스 통합 개발 환경을 사용하였습니다.</p>
